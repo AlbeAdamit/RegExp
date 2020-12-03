@@ -1,9 +1,16 @@
-const pattern = /^playstation( [2-5])?$/i // matches playstation, playstation 2, playstation 3, playstation 4, playstation 5
+/*Create a regular expression that validates if the sentence is a question. A question starts with :
 
-const test = "Ceci est une liste non exhaustive de consoles :playstation, playstation 2, playstation 3 , playstation 4, playstation 5 "
+What
+Why
+How
+When
+Who
+*/
+const pattern  = /^(Wh(at|y|en|o)|How)( [a-zA-Z]+){2,} ?\?$/img
+const text = "Why am I ugly ?"
 
-if (test.match(pattern)) {
-    console.log("Y'a des play!")
-} else {
-    console.log("Erreur, que des Xbox")
+if (text.match(pattern)){
+    console.log("Valid");
+} else{
+    console.log("Error");
 }
